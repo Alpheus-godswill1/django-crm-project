@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class LeadtrackrConfig(AppConfig):
+class LeadtrackerConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'LeadTrackr'
+    name = 'LeadTracker'
