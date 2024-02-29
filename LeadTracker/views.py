@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Hello, World!')
+    return render(request, 'LeadTracker/index.html')    # This is the path to the index.html file 
+
