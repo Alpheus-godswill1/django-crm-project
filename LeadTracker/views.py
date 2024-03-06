@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, LoginForm
 
 def index(request):
@@ -12,7 +12,7 @@ def registerPage(request):
         if form.is_valid():
             form.save()
             # return redirect('login')
-        context = {'form': form}
+    context = {'form': form}
         
     return render(request, 'LeadTracker/register.html', context)
 
