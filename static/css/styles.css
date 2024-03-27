@@ -20,3 +20,8 @@ body {
 p {
   color: #666;
 }
+
+.form-layout {
+  border-radius: 15px;
+  width: 500px;
+}
