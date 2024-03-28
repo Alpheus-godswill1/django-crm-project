@@ -1,33 +1,34 @@
-{% extends 'LeadTracker/base.html' %}
+{% extends 'LeadTracker/base.html' %} 
+
+{% load crispy_forms_tags %}
 
 {% block content %}
 
 <body class="bg-light">
-    <div class="container bg-light shadow-sm">
+  <div class="container bg-light shadow-sm form-layout">
+    <h3>Create your account</h3>
 
-        <h3> Create  your account </h3>
+    <h5>Start managing your clients today!</h5>
 
-        <h5> Start managing your clients today! </h5>
+    <hr />
+    <br />
 
-        <hr>
-        <br>
+    <form action="" method="POST" autocomplete="off">
+      {% csrf_token %} 
+      
+     {{ form|crispy }}
 
-        <form action="" method="POST" autocomplete="off">
-            {% csrf_token %}
+      <br />
+      <button type="submit" class="btn btn-dark w-100 p-2">
+        Create Account
+      </button>
+    </form>
 
-            {{ form.as_p }}
-
-            <br>
-            <button type="submit" class="btn btn-primary">Create Account</button>
-
-        </form>
-
-        <div class="text-center"> 
-            <br>
-            <p> Already have an account? <a href="{% url 'register' %}"> Login </a> </p>
-        </div>
-
+    <div class="text-center">
+      <br />
+      <p>Already have an account? <a href="{% url 'register' %}"> Login </a></p>
     </div>
-    <br>
+  </div>
+  <br />
 </body>
 {% endblock %}
